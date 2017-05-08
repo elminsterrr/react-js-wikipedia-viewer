@@ -5,10 +5,6 @@ export default class ConnectionError extends React.Component {
     super(props);
     this.state = {errorInfo: 'Nothing found for your query. Please try another search.'};
   }
-  
-  componentDidMount() {
-    console.log('Nothing found for your query. Please try another search.');
-  }
 
   render() {
 

@@ -38,24 +38,21 @@ export default class SubmitForm extends React.Component {
     event.preventDefault();
   }
 
-  axiosStart() {
-    if (this.state.value === '') { 
-      return this.handleReset();
-    }
+  axiosStart() { 
     const wikiApiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search=';
     const wikiApiUrlWithQuery = wikiApiUrl + this.state.value;
-    console.log(('An input was just submitted: ' + this.state.value));
-    axios.get(wikiApiUrlWithQuery) 
-      .then(response => {
-        console.log('@axiosStart was launched by user!');
-        this.setState(Object.assign({}, this.state, { data: response.data }))
-      }) 
-      .catch(err => {
-        console.log('Error: => ' + err);
-        this.setState(Object.assign({}, this.state, { data: 'error' }))
-      });
+    if (this.state.value === '') { 
+      return this.handleReset();
+    } else {
+      axios.get(wikiApiUrlWithQuery) 
+        .then(response => {
+          this.setState({data: response.data})
+        }) 
+        .catch(err => {
+          this.setState({data: 'error'})
+        });
+    }
   }
-
 
   render() {
     return (
@@ -65,7 +62,8 @@ export default class SubmitForm extends React.Component {
             <Title />
             <input className="wiki_query" type="text" value={this.state.value} onChange={this.handleChange} autoFocus />
           </label>
-          <br/><button className="btn btn-default mainButton" type="submit" value="Submit">Search</button>
+          <br/>
+          <button className="btn btn-default mainButton" type="submit" value="Submit">Search</button>
           <div className={this.state.display}>
             <button className="btn btn-info reset" onClick={this.handleReset}>X</button>
           </div>
