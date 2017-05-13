@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../css/main.scss';
+import '../scss/main.scss';
 
 import Layout from './components/Layout';
 
