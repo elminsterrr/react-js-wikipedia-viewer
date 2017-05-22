@@ -1,6 +1,5 @@
 @import "_variables";
 @import "_mixins";
-
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
@@ -15,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('https://res.cloudinary.com/dfe57evk4/image/upload/v1468759348/stars_small_rhuhef.jpg') bottom center no-repeat; 
+  background: url('https://res.cloudinary.com/dfe57evk4/image/upload/v1468759348/stars_small_rhuhef.jpg') bottom center no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -81,12 +80,12 @@
     &:hover {
       background-color: #ce0000;
       border: 1px solid $mainWhite;
-    }  
+    }
   }
   .single-result {
     color: #333;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    text-decoration: none; 
+    text-decoration: none;
     width: 100%;
     max-width: 750px;
     margin: 0 auto;

@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
-
 import Title from './Title';
 import Results from './Results';
 
-export default class SubmitForm extends React.Component {
+class SubmitForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,23 +30,22 @@ export default class SubmitForm extends React.Component {
   }
 
   handleSubmit(event) {
-    // handle change has just updated state
-    // now app can start axios with entered query
-    // as soon as user submits
+    // handleChange has just updated state and now app can
+    // start axios with entered query as soon as user submits
     this.axiosStart();
     event.preventDefault();
   }
 
-  axiosStart() { 
+  axiosStart() {
     const wikiApiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search=';
     const wikiApiUrlWithQuery = wikiApiUrl + this.state.value;
-    if (this.state.value === '') { 
+    if (this.state.value === '') {
       return this.handleReset();
     } else {
-      axios.get(wikiApiUrlWithQuery) 
+      axios.get(wikiApiUrlWithQuery)
         .then(response => {
           this.setState({data: response.data})
-        }) 
+        })
         .catch(err => {
           this.setState({data: 'error'})
         });
@@ -68,8 +66,10 @@ export default class SubmitForm extends React.Component {
             <button className="btn btn-info reset" onClick={this.handleReset}>X</button>
           </div>
         </form>
-        <Results dataReady={this.state.data} /> 
+        <Results dataReady={this.state.data} />
       </div>
     );
   }
 }
+
+export default SubmitForm;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class Title extends React.Component {  
+class Title extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,13 +9,13 @@ export default class Title extends React.Component {
   }
 
   render() {
-    
     setTimeout(() => {
       this.setState({titleWiki: "wikipedia"});
     }, 4500);
-
-    return(
+    return (
       <h1>{this.state.titleWiki}</h1>
     );
-  }  
+  }
 }
+
+export default Title;
