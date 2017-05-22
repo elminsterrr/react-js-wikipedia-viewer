@@ -1,13 +1,11 @@
-var webpack = require('webpack');
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-var extractPlugin = new ExtractTextPlugin({
+const webpack = require('webpack');
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractPlugin = new ExtractTextPlugin({
   filename: 'main.css'
 });
-
-var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
+const DIST_DIR = path.resolve(__dirname, "dist");
+const SRC_DIR = path.resolve(__dirname, "src");
 
 module.exports = {
   entry: SRC_DIR + '/js/mainApp.js',
