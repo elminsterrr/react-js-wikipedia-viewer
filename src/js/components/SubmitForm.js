@@ -17,15 +17,15 @@ class SubmitForm extends Component {
   }
 
   handleReset() {
-    this.setState({data: 'reset', value: '', display: 'displayNone'});
+    this.setState({ data: 'reset', value: '', display: 'displayNone' });
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
     if (event.target.value !== '') {
-      this.setState({display: 'displayBlock'});
+      this.setState({ display: 'displayBlock' });
     } else {
-      this.setState({display: 'displayNone'});
+      this.setState({ display: 'displayNone' });
     }
   }
 
@@ -41,27 +41,30 @@ class SubmitForm extends Component {
     const wikiApiUrlWithQuery = wikiApiUrl + this.state.value;
     if (this.state.value === '') {
       return this.handleReset();
-    } else {
-      axios.get(wikiApiUrlWithQuery)
-        .then(response => {
-          this.setState({data: response.data})
-        })
-        .catch(err => {
-          this.setState({data: 'error'})
-        });
     }
+    return axios.get(wikiApiUrlWithQuery)
+        .then(response => {
+          this.setState({ data: response.data });
+        })
+        .catch(error => {
+          this.setState({ data: 'error' });
+        });
   }
 
   render() {
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit}>
-          <label>
-            <Title />
-            <input className="wiki_query" type="text" value={this.state.value} onChange={this.handleChange} autoFocus />
-          </label>
-          <br/>
-          <button className="btn btn-default mainButton" type="submit" value="Submit">Search</button>
+          <Title />
+          <input
+            className="wiki_query"
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+            autoFocus
+          />
+          <br />
+          <button className="btn btn-default mainBtn" type="submit" value="Submit">Search</button>
           <div className={this.state.display}>
             <button className="btn btn-info reset" onClick={this.handleReset}>X</button>
           </div>

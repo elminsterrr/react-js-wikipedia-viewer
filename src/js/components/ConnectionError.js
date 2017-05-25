@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class ConnectionError extends Component {
   constructor(props) {
     super(props);
-    this.state = {errorInfo: 'The operation failed! We encountered an error while trying to connect to Wikipedia resources!'};
+    this.state = {
+      errorInfo: 'Sorry! We were unable to connect to Wikipedia resources!' };
   }
 
   render() {

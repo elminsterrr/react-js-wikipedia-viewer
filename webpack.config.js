@@ -4,8 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractPlugin = new ExtractTextPlugin({
   filename: 'main.css'
 });
-const DIST_DIR = path.resolve(__dirname, "dist");
-const SRC_DIR = path.resolve(__dirname, "src");
+const DIST_DIR = path.resolve(__dirname, 'dist');
+const SRC_DIR = path.resolve(__dirname, 'src');
 
 module.exports = {
   entry: SRC_DIR + '/js/mainApp.js',
@@ -22,7 +22,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ["react", "es2015", "stage-2"]
+              presets: ['react', 'es2015', 'stage-2']
             }
           }
         ]

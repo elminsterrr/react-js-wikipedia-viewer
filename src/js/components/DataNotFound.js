@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class DataNotFound extends Component {
   constructor(props) {
     super(props);
-    this.state = {errorInfo: 'Nothing found for your query. Please try another search.'};
+    this.state = { errorInfo: 'Nothing found for your query. Please try another search.' };
   }
 
   render() {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const PlaceHolder = (props) => {
   return (
-    <div></div>
+    <div />
   );
 };
 
