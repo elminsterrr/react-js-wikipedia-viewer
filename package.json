@@ -2,7 +2,7 @@
   "name": "viewer",
   "version": "1.0.0",
   "description": "",
-  "main": "mainApp.js",
+  "main": "index.js",
   "scripts": {
     "build": "webpack -d && xcopy \"src/index.html\" \"dist/\" /F /Y && webpack-dev-server --content-base src/ --inline",
     "build:prod": "webpack -p && xcopy \"src/index.html\" \"dist/\" /F /Y"
@@ -21,7 +21,11 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.0",
-    "eslint-config-rallycoding": "^3.2.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",

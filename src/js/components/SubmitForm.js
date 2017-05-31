@@ -9,7 +9,7 @@ class SubmitForm extends Component {
     this.state = {
       data: '',
       value: '',
-      display: 'displayNone'
+      display: 'displayNone',
     };
     this.handleReset = this.handleReset.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -43,12 +43,12 @@ class SubmitForm extends Component {
       return this.handleReset();
     }
     return axios.get(wikiApiUrlWithQuery)
-        .then(response => {
-          this.setState({ data: response.data });
-        })
-        .catch(error => {
-          this.setState({ data: 'error' });
-        });
+      .then(response => {
+        this.setState({ data: response.data });
+      })
+      .catch(error => {
+        this.setState({ data: 'error' });
+      });
   }
 
   render() {
@@ -61,7 +61,6 @@ class SubmitForm extends Component {
             type="text"
             value={this.state.value}
             onChange={this.handleChange}
-            autoFocus
           />
           <br />
           <button className="btn btn-default mainBtn" type="submit" value="Submit">Search</button>

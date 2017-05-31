@@ -1,7 +1,7 @@
 import React from 'react';
 import SubmitForm from './SubmitForm';
 
-const App = (props) => {
+function App(props) {
   return (
     <section className="cover">
       <div className="cover-caption">
@@ -9,6 +9,6 @@ const App = (props) => {
       </div>
     </section>
   );
-};
+}
 
 export default App;

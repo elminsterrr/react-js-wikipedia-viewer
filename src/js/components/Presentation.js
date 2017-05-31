@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Presentation = (props) => {
+function Presentation(props) {
   // just to determine array length^
   const results = props.dataReady[1].map((result, index) => {
     return (
       <a
         href={props.dataReady[3][index]}
         key={index}
-        className="single-result" 
+        className="single-result"
         target="_blank"
-        rel='noopener noreferrer'
+        rel="noopener noreferrer"
       >
         <h3>{props.dataReady[1][index]}</h3>
         <p>{props.dataReady[2][index]}</p>
@@ -22,6 +22,6 @@ const Presentation = (props) => {
       <div>{results}</div>
     </div>
   );
-};
+}
 
 export default Presentation;

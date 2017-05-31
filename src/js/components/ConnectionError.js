@@ -4,7 +4,8 @@ class ConnectionError extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorInfo: 'Sorry! We were unable to connect to Wikipedia resources!' };
+      errorInfo: 'Sorry! We were unable to connect to Wikipedia resources!',
+    };
   }
 
   render() {

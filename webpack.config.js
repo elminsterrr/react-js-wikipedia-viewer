@@ -8,7 +8,7 @@ const DIST_DIR = path.resolve(__dirname, 'dist');
 const SRC_DIR = path.resolve(__dirname, 'src');
 
 module.exports = {
-  entry: SRC_DIR + '/js/mainApp.js',
+  entry: SRC_DIR + '/js/index.js',
   output: {
     path: DIST_DIR + '/app',
     filename: 'bundle.js',
@@ -36,6 +36,12 @@ module.exports = {
     ]
   },
   plugins: [
-    extractPlugin
+    extractPlugin,
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
   ]
 };
