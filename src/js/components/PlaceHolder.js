@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PlaceHolder(props) {
+function PlaceHolder() {
   return (
     <div />
   );

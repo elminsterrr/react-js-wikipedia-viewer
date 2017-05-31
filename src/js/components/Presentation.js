@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Presentation(props) {
-  // just to determine array length^
   const results = props.dataReady[1].map((result, index) => {
     return (
       <a

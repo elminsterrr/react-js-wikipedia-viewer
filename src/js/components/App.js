@@ -1,7 +1,7 @@
 import React from 'react';
 import SubmitForm from './SubmitForm';
 
-function App(props) {
+function App() {
   return (
     <section className="cover">
       <div className="cover-caption">
