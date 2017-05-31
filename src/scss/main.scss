@@ -19,9 +19,11 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+
   .cover-caption {
     text-align: center;
   }
+
   h1 {
     color: $mainWhite;
     font-family: Lobster, Verdana, Arial, Helvetica, sans-serif;
@@ -29,9 +31,11 @@
     font-weight: $waga;
     padding-bottom: 10px;
   }
+
   p {
     color: $mainWhite;
   }
+
   .wiki_query {
     color: $black;
     width: 290px;
@@ -40,20 +44,25 @@
     font-size: 2.25rem;
     line-height: 1.333333;
     border-radius: 1rem;
+
     &:focus {
       outline: 0;
     }
   }
+
   .mainBtn {
     display: inline-block !important;
   }
+
   .displayNone {
     display: none !important;
   }
+
   .displayBlock {
     display: inline-block !important;
     margin-left: 5px;
   }
+
   .btn-default {
     display: block;
     margin: 1rem auto;
@@ -63,25 +72,30 @@
     line-height: 2rem;
     font-weight: $waga;
     border: 1px solid #000;
+
     &:focus {
-      @include przycisk;
       outline: 0;
+      @include przycisk;
     }
+
     &:hover {
       @include przycisk;
     }
   }
+
   .reset {
     &:focus {
       background-color: $black;
       border: 1px solid $mainWhite;
       outline: 0;
     }
+
     &:hover {
       background-color: #ce0000;
       border: 1px solid $mainWhite;
     }
   }
+
   .single-result {
     color: #333;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -96,15 +110,18 @@
     text-align: left;
     border-left: 3px solid #717171;
     border-right: 3px solid #717171;
+
     h3 {
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
     }
+
     p {
       font-size: 1.333rem;
       color: #333;
     }
+
     &:first-of-type {
       margin-top: 25px;
     }
@@ -112,17 +129,20 @@
     &:last-of-type {
       margin-bottom: 50px;
     }
+
     &:hover {
       color: #333;
       border-color: #ff3300;
       text-decoration: none;
     }
+
     &:focus {
       color: #333;
       border-color: #33cc33;
       text-decoration: none;
       outline: 0;
     }
+
     &:visited {
       color: #333;
       border-color: #33cc33;
