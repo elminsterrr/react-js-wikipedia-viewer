@@ -1,11 +1,13 @@
 import React from 'react';
+import _ from 'lodash';
 
 function Presentation(props) {
   const results = props.dataReady[1].map((result, index) => {
+    const keyUnique = _.uniqueId('key_');
     return (
       <a
         href={props.dataReady[3][index]}
-        key={index}
+        key={keyUnique}
         className="single-result"
         target="_blank"
         rel="noopener noreferrer"
