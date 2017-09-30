@@ -52,19 +52,6 @@ class SubmitForm extends Component {
   }
 
   render() {
-    let sendItDown = '';
-    if (this.state.data === 'reset') {
-      sendItDown = 'reset';
-    } else if (this.state.data.length !== 0) {
-      sendItDown = (this.state.data).map((element, index) => {
-        let done;
-        if (index !== 0) {
-          done = element.slice(0, 5);
-        }
-        return done;
-      });
-    }
-
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit}>
@@ -81,7 +68,7 @@ class SubmitForm extends Component {
             <button className="btn btn-info reset" onClick={this.handleReset}>X</button>
           </div>
         </form>
-        <Results dataReady={sendItDown} />
+        <Results dataReady={this.state.data} />
       </div>
     );
   }
