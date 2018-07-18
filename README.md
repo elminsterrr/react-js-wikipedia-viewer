@@ -1,4 +1,4 @@
-#react-js-wikipedia-viewer
+# react-js-wikipedia-viewer
 This is my ReactJS Wikipedia Viewer project.
 [See it live on GitHub pages.](https://elminsterrr.github.io/react-js-wikipedia-viewer/)
 
